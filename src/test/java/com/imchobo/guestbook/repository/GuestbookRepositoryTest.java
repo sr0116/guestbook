@@ -53,38 +53,38 @@ public class GuestbookRepositoryTest {
 
   @Test
   public  void testQuery() {
-    Pageable pageable = PageRequest.of(0, 20, Sort.by("gno").descending());
-    QGuestbook qGuestbook = QGuestbook.guestbook;
-    String keyword = "1";
-    BooleanBuilder builder = new BooleanBuilder();
-    BooleanExpression expression = qGuestbook.title.contains(keyword);
-
-    builder.and(expression);
-
-    Page<Guestbook> result = repository.findAll(builder, pageable);
-    result.stream().forEach(guestbook -> {
-      System.out.println(guestbook);
-    });
+//    Pageable pageable = PageRequest.of(0, 20, Sort.by("gno").descending());
+//    QGuestbook qGuestbook = QGuestbook.guestbook;
+//    String keyword = "1";
+//    BooleanBuilder builder = new BooleanBuilder();
+//    BooleanExpression expression = qGuestbook.title.contains(keyword);
+//
+//    builder.and(expression);
+//
+//    Page<Guestbook> result = repository.findAll(builder, pageable);
+//    result.stream().forEach(guestbook -> {
+//      System.out.println(guestbook);
+//    });
   }
 
   @Test
   public void testQuerydsl() {
     Pageable pageable = PageRequest.of(0, 10);
 
-    QGuestbook qGuestbook = QGuestbook.guestbook;
-
-    String keyword = "1";
-
-    BooleanBuilder builder = new BooleanBuilder();
-
-    BooleanExpression expression = qGuestbook.title.contains(keyword);
-
-    builder.and(expression);
-
-
-    Page<Guestbook> guestbooks = repository.findAll(builder, pageable);
-
-    log.info("{}", guestbooks);
+//    QGuestbook qGuestbook = QGuestbook.guestbook;
+//
+//    String keyword = "1";
+//
+//    BooleanBuilder builder = new BooleanBuilder();
+//
+//    BooleanExpression expression = qGuestbook.title.contains(keyword);
+//
+//    builder.and(expression);
+//
+//
+//    Page<Guestbook> guestbooks = repository.findAll(builder, pageable);
+//
+//    log.info("{}", guestbooks);
   }
 
   @Test

@@ -14,9 +14,6 @@ public class indexController {
     return  Map.of("test", 123456); // 8080포트에 해당 값 나옴
   }
 
-  @GetMapping("guestbook/list")
-  public  void list(){
 
-  }
 
 }
